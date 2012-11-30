@@ -39,7 +39,7 @@ public class Target {
         return this.name;
     }
     //Печатает сообщение от имени этой цели
-    public void Say(String s){
+    public void say(String s){
         System.out.println("Target("+ this.num +"): "  + ": (" + s + ");");
     }
 

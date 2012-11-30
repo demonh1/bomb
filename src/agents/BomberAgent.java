@@ -30,7 +30,7 @@ public class BomberAgent extends Agent {
                 ACLMessage input_message = receive();
                 if (null != input_message) {
                     detectTarget(input_message);
-                    Kill(input_message);
+                    kill(input_message);
                 }
                 block();
             }
@@ -52,7 +52,7 @@ public void detectTarget( ACLMessage input_message ){
 }
 }
 
-public void Kill(ACLMessage input_message){
+public void kill(ACLMessage input_message){
         String message_string = input_message.getContent().toString();
         AID sender =  input_message.getSender();
         Coord target_coord = new Coord();

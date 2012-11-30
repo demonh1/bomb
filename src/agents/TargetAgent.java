@@ -33,9 +33,9 @@ public class TargetAgent extends  Agent {
                 ACLMessage input_message = receive();
                 if (null != input_message) {
                     sayCoords(input_message);
-                    Die(input_message);
+                    die(input_message);
                 }
-                Live(input_message);
+                live(input_message);
                 block();
             }
 
@@ -76,7 +76,7 @@ public class TargetAgent extends  Agent {
         }
     }
 
-     public void Live (ACLMessage input_message) {
+     public void live (ACLMessage input_message) {
          lookOver();
          makeNoise("noise");
 
@@ -92,7 +92,7 @@ public class TargetAgent extends  Agent {
             send(reply);
          }
      }
-     public void Die(ACLMessage input_message ){
+     public void die(ACLMessage input_message ){
         String message_string = input_message.getContent().toString();
     if(this.isDetected && message_string.split(":")[0].equals("you was killed"))
     {

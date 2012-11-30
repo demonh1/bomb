@@ -31,7 +31,7 @@ public class Bomber {
         return this.name;
     }
 
-   public void Say(String s){
+   public void say(String s){
         System.out.println("Bomber("+ this.num +"): " + ": (" + s + ");");
     }
 
