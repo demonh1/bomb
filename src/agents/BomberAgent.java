@@ -6,7 +6,8 @@ import jade.core.AID;
 import jade.core.Agent;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.lang.acl.ACLMessage;
-import java.util.Vector;
+import java.util.List;
+import java.util.ArrayList;
 import objects.Bomber;
 
 /**
@@ -15,13 +16,13 @@ import objects.Bomber;
  */
 public class BomberAgent extends Agent {
     
-     Bomber bomber;
-    Vector <AID> targets; // list of targets
+    Bomber bomber;
+    List <AID> targets;
 
     @Override
      protected void setup() {
         this.bomber  = new Bomber();
-        this.targets = new Vector <AID>();
+        this.targets = new ArrayList <AID>();
 
         this.addBehaviour(new CyclicBehaviour(this) {
             
